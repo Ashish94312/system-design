@@ -41,7 +41,7 @@ class StackOverflow {
     vector<Post*> searchQuestions(const string& tag) const;
     void displayUserProfile(const string& userId) const;
     void displayQuestion(const string& QuestionId) const;
-    void displaAllQuestions() const;
+    void displayAllQuestions() const;
 
 
     private:

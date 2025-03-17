@@ -9,12 +9,12 @@ using namespace std;
 class Comment {
     private:
     string commentId;
-    string UserId;
+    string userId;
     string content;
     time_t timestamp;
 
     public:
-    Comment(string commentId, string UserId, string content);
+    Comment(string commentId, string userId, string content);
 
     string getCommentId() const;
     string getUserId() const;

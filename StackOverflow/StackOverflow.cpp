@@ -1,5 +1,3 @@
-
-
 #include "StackOverflow.hpp"
 #include <iostream>
 #include <vector>
@@ -168,6 +166,14 @@ void StackOverflow::displayQuestion(const string& questionId) const {
     }
 }
 
+void StackOverflow::displayAllQuestions() const {
+    for(const auto& post : posts) {
+        if(post->getType() == PostType::QUESTIONS) {
+            post->displayInfo();
+            cout << " -------------------------------- " << endl;
+        }
+    }
+}
 
 User* StackOverflow::findUser(const string& userId) const {
     auto it = find_if(users.begin(), users.end(), [userId](User* user) {
